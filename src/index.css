@@ -17,18 +17,18 @@
 }
 
 [data-theme='dark'] {
-    --orangered: #FF4545;
-    --violet: #d1c2c2;
+    --orangered: #e66565;
+    --violet: #d177ea;
     --skyblue: #3E84F0;
     --green: rgb(118 214 118);
-    --lightgreen: #c9f7ef28;
-    --lightdark: #ffffff;
-    --main-content: rgb(230, 230, 230);
+    --lightgreen: #cccccc42;
+    --lightdark: #fdfce7;
+    --main-content: rgb(255, 254, 245);
     --white: rgb(50 50 50 / 80%);
     --dark: #fff;
     --proyect-background: rgb(75, 126, 255, 0.13);
     --contact-background: rgb(132 155 143);
-    --about-text: #fff;
+    --about-text: #ffe4e4;
 
 
 }
@@ -325,6 +325,7 @@ label {
     font-weight: 400;
     opacity: 0.6;
     font-size: 1rem;
+    color: var(--about-text);
 }
 
 .home__title {
@@ -347,6 +348,7 @@ label {
     font-size: 1.78rem;
     font-weight: 500;
     background-color: var(--lightgreen);
+    color: var(--lightdark);
     padding: 0.2rem 2rem;
     border-radius: 1rem;
     z-index: 1;
@@ -366,6 +368,7 @@ label {
     border-radius: 1rem;
     z-index: 2;
     transition: all 300ms ease-in-out;
+    color: var(--orangered);
 }
 
 .home__button::before {
@@ -386,7 +389,7 @@ label {
 .home__button:hover {
     background-color: var(--orangered);
     opacity: 0.67;
-    color: var(--white);
+    color: #fff;
 }
 
 /* PROYECTOS */
@@ -477,7 +480,8 @@ label {
 .proyect__img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
 
 .proyect__info {
@@ -669,7 +673,7 @@ label {
 .social__curriculum:hover {
     background-color: var(--violet);
     opacity: 0.65;
-    color: var(--white);
+    color: #fff;
 }
 
 .about__skills {
@@ -678,17 +682,15 @@ label {
 }
 
 .social__description {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.8;
-    font-weight: 300;
-    color: var(--about-text);
-
-}
-
-.social__description:nth-child(1) {
     font-weight: 500;
-    text-decoration: none;
+    color: var(--about-text);
+    margin-top: -2rem;
+    margin-bottom: 2rem;
 }
+
+
 
 .skills__title {
     font-size: 2rem;
@@ -717,11 +719,9 @@ label {
     border-right: 1px inset rgba(0, 0, 0, 0.12);
     border-bottom: 1px inset rgba(0, 0, 0, 0.12);
     box-shadow: 3px 3px 10px -9px var(--dark);
-    padding-top: 0.6rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.3rem;
+    padding: 0.5rem 0.3rem 0.5rem 0.6rem;
     border-radius: 1rem;
+    color: var(--main-content);
 }
 
 .skill__image {
@@ -918,6 +918,58 @@ label {
     animation-duration: 30s;
 }
 
+
+/*DARK THEME*/
+
+.toggle {
+    position: absolute;
+    right: 4%;
+    top: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    font-size: 1.4rem;
+    z-index: 10;
+    width: 70px;
+    height: 40px;
+    border-radius: 160px;
+    background-color: #22222267;
+    transition: all 0.5s;
+    box-shadow: inset 0 0px 30px rgba(0, 0, 0, 0.05), inset 0 4px 4px rgba(0, 0, 0, 0.1),
+        inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.toggle ion-icon {
+    transition: all 300ms ease-in-out;
+    pointer-events: none;
+}
+
+.toggle ion-icon {
+    color: white;
+}
+
+.toggle ion-icon:first-child {
+    background-color: orange;
+    border-radius: 50%;
+    padding: 0.6rem;
+    margin-left: -0.5rem;
+}
+
+.toggle-active ion-icon:last-child {
+    background-color: #222;
+    border-radius: 50%;
+    padding: 0.6rem;
+    margin-right: -0.5rem;
+    transform: translateX(-50px);
+}
+
+.toggle-active ion-icon:first-child {
+    background-color: transparent;
+    transform: translateX(50px);
+}
+
 @keyframes appear {
     0% {
         transform: translateY(-30px);
@@ -1105,9 +1157,18 @@ label {
     .Page-home {
         overflow: hidden;
     }
+
+    .social__description {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 1000px) {
+    .toggle {
+        right: 5%;
+        top: 14%;
+    }
+
     .nav-close-open {
         width: fit-content;
         border: none;
@@ -1271,57 +1332,4 @@ label {
 .page-about::-webkit-scrollbar-thumb {
     background: rgb(167, 166, 166);
     border-radius: 0.5rem;
-}
-
-
-
-/*DARK THEME*/
-
-.toggle {
-    position: absolute;
-    right: 6%;
-    top: 3%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 0.5rem;
-    font-size: 1.4rem;
-    z-index: 10;
-    width: 70px;
-    height: 40px;
-    border-radius: 160px;
-    background-color: #22222267;
-    transition: all 0.5s;
-    box-shadow: inset 0 0px 30px rgba(0, 0, 0, 0.05), inset 0 4px 4px rgba(0, 0, 0, 0.1),
-        inset 0 -2px 2px rgba(0, 0, 0, 0.1);
-}
-
-.toggle ion-icon {
-    transition: all 300ms ease-in-out;
-    pointer-events: none;
-}
-
-.toggle ion-icon {
-    color: white;
-}
-
-.toggle ion-icon:first-child {
-    background-color: orange;
-    border-radius: 50%;
-    padding: 0.6rem;
-    margin-left: -0.5rem;
-}
-
-.toggle-active ion-icon:last-child {
-    background-color: #222;
-    border-radius: 50%;
-    padding: 0.6rem;
-    margin-right: -0.5rem;
-    transform: translateX(-50px);
-}
-
-.toggle-active ion-icon:first-child {
-    background-color: transparent;
-    transform: translateX(50px);
 }
