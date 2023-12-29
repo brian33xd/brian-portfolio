@@ -1,5 +1,6 @@
 import { skills } from '../data/skills'
 import foto from '../assets/images/proyect.jpg'
+import curriculum from '../assets/CV_Brian.pdf'
 
 export const About = () => {
 
@@ -26,7 +27,7 @@ export const About = () => {
               <ion-icon name="logo-twitter"></ion-icon></a>
           </div>
 
-          <a href="" className='social__curriculum'>
+          <a href={curriculum} download="Brian Godoy CV" className='social__curriculum'>
             Descargar CV </a>
         </section >
 
