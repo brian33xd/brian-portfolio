@@ -112,7 +112,7 @@ label {
     translate: (-50%, -50%);
     z-index: 10;
     pointer-events: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     filter: drop-shadow(0 0 0.50rem var(--lightdark));
 }
 
@@ -814,6 +814,7 @@ label {
     transition: all 250ms ease-in-out;
     color: var(--white);
     z-index: 3;
+
 }
 
 .form__label-textarea {
@@ -832,6 +833,7 @@ label {
     color: var(--white);
     z-index: 3;
 }
+
 
 .form__input:focus~label {
     top: -60%;
@@ -859,7 +861,17 @@ label {
     outline: none;
 }
 
+.label-active {
+    top: -60%;
+    left: 0;
+    color: var(--main-content);
+}
 
+.label-active-textarea {
+    top: -15%;
+    left: 0;
+    color: var(--main-content);
+}
 
 .box {
     position: absolute;

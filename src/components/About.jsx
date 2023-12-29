@@ -5,7 +5,7 @@ export const About = () => {
 
   return (
     <div className='Page page-about' id='About'>
-      <h1 className='about__title'>About me.</h1>
+      <h1 className='about__title'>Sobre mi.</h1>
       <main className='about__container'>
         <section className="about__social">
           <h2 className='social__name'>Brian Godoy</h2>
@@ -27,20 +27,19 @@ export const About = () => {
           </div>
 
           <a href="" className='social__curriculum'>
-            Download Resume </a>
+            Descargar CV </a>
         </section >
 
 
         <section className="about__skills">
           <div className='about__social-description'>
-            <p className='social__description'>Mi principal objetivo en la industria de la programación es crecér profesionalmente, aportar mi conocimiento para crear y mejorar/optimizar proyectos web con nuevas funcionalidades
-              que le simplifiquen a la gente el uso de estos.</p>
+            <p className='social__description'>Como desarrollador web full stack aspiro a crecer en la industria tecnológica y aportar mi conocimiento en pos de crear nuevos proyectos/funcionalidades web que le simplifiquen a los usuarios el uso de estas herramientas como lo son las páginas web.</p>
 
 
           </div>
 
           <div className="skills__container">
-            <h3 className='skills__title'>My Skills</h3>
+            <h3 className='skills__title'>Mis habilidades</h3>
 
             <main className="skills__list">
 
