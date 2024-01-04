@@ -1,7 +1,7 @@
 import { skills } from "../data/skills";
 import foto from "../assets/images/proyect.jpg";
 import curriculum from "../assets/CV_Brian.pdf";
-import curriculumEn from "../assets/CV_BrianEn.pdf";
+import curriculumEn from "../assets/CV_BrianEN.pdf";
 import { useTranslation } from "react-i18next";
 
 export const About = () => {
