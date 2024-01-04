@@ -1,71 +1,90 @@
-import { skills } from '../data/skills'
-import foto from '../assets/images/proyect.jpg'
-import curriculum from '../assets/CV_Brian.pdf'
+import { skills } from "../data/skills";
+import foto from "../assets/images/proyect.jpg";
+import curriculum from "../assets/CV_Brian.pdf";
+import curriculumEn from "../assets/CV_BrianEn.pdf";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
-
+  const { t } = useTranslation();
   return (
-    <div className='Page page-about' id='About'>
-      <h1 className='about__title'>Sobre mi.</h1>
-      <main className='about__container'>
+    <div className="Page page-about" id="About">
+      <h1 className="about__title">{t("About")}</h1>
+      <main className="about__container">
         <section className="about__social">
-          <h2 className='social__name'>Brian Godoy</h2>
+          <h2 className="social__name">Brian Godoy</h2>
           <div className="social__mask-image">
-            <img src={foto} alt="mine" className='social__img'
-              decoding='async'
-              loading='lazy' />
+            <img
+              src={foto}
+              alt="mine"
+              className="social__img"
+              decoding="async"
+              loading="lazy"
+            />
           </div>
 
           <div className="social__icons-container">
-            <a href="https://github.com/brian33xd" className='social__icon' target="_blank" rel='noreferrer'>
+            <a
+              href="https://github.com/brian33xd"
+              className="social__icon"
+              target="_blank"
+              rel="noreferrer"
+            >
               <ion-icon name="logo-github"></ion-icon>
             </a>
-            <a href="https://www.linkedin.com/in/brian-godoy-432156199/" className='social__icon' target="_blank" rel='noreferrer'>
+            <a
+              href="https://www.linkedin.com/in/brian-godoy-432156199/"
+              className="social__icon"
+              target="_blank"
+              rel="noreferrer"
+            >
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-            <a href="https://twitter.com/Brian51965726" className='social__icon' target="_blank" rel='noreferrer'>
-              <ion-icon name="logo-twitter"></ion-icon></a>
+            <a
+              href="https://twitter.com/Brian51965726"
+              className="social__icon"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
           </div>
 
-          <a href={curriculum} download="Brian Godoy CV" className='social__curriculum'>
-            Descargar CV </a>
-        </section >
-
+          <a
+            href={t("About-cv") == "Download CV" ? curriculumEn : curriculum}
+            download="Brian Godoy CV"
+            className="social__curriculum"
+          >
+            {t("About-cv")}
+          </a>
+        </section>
 
         <section className="about__skills">
-          <div className='about__social-description'>
-            <p className='social__description'>Como desarrollador web full stack aspiro a crecer en la industria tecnológica y aportar mi conocimiento en pos de crear nuevos proyectos/funcionalidades web que le simplifiquen a los usuarios el uso de estas herramientas como lo son las páginas web.</p>
-
-
+          <div className="about__social-description">
+            <p className="social__description">{t("About-txt")}</p>
           </div>
 
           <div className="skills__container">
-            <h3 className='skills__title'>Mis habilidades</h3>
+            <h3 className="skills__title">{t("About-stack")}</h3>
 
             <main className="skills__list">
-
-              {
-                skills.map(skill => {
-
-                  return (
-                    <div className='skills__skill' key={skill.id}>
-                      <img src={skill.id}
-                        alt="skill"
-                        className='skill__image'
-                        decoding='async'
-                        loading='lazy' />
-                      <h4 className='skill__name'>{skill.name}</h4>
-                    </div>
-                  )
-                })
-
-              }
-
+              {skills.map((skill) => {
+                return (
+                  <div className="skills__skill" key={skill.id}>
+                    <img
+                      src={skill.id}
+                      alt="skill"
+                      className="skill__image"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                    <h4 className="skill__name">{skill.name}</h4>
+                  </div>
+                );
+              })}
             </main>
           </div>
         </section>
       </main>
-
     </div>
-  )
-}
+  );
+};
