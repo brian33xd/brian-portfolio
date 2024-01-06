@@ -1126,17 +1126,19 @@ label {
 
 
 
+
+@media (min-width: 1915px) {
+    .Page {
+        width: 89%;
+    }
+}
+
 @media (min-width: 1595px) {
     .Page {
         width: 87%;
     }
 }
 
-@media (min-width: 1915px) {
-    .Page {
-        width: 89.5%;
-    }
-}
 
 @media (max-width: 1375px) {
     .Page {
