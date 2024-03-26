@@ -13,13 +13,13 @@ export const proyects = [
 
   {
     id: "b",
-    nombre: "TTecla",
-    url: "https://teclado-g.vercel.app/",
-    categorias: ["HTML", "CSS", "JavaScript"],
+    nombre: "Brian's social network",
+    url: "https://social-front-end.vercel.app/",
+    categorias: ["HTML", "CSS", "MERN STACK"],
     descripcion:
-      "Una demostración de la interactividad con el teclado sin ningún framework",
-    github: "https://github.com/brian33xd/teclado-g",
-    imagen: "http://imgfz.com/i/UJX87mw.jpeg",
+      "Una red social compuesta por un buscador de usuarios, la capacidad de seguir a otros usuarios, un panel para realizar publicaciones, un feed para ver las publicaciónes de usuarios que sigo, un formulario para registrar usuarios, editar usuario y logín de usuarios.",
+    github: "https://github.com/brian33xd/Social-Front-End",
+    imagen: "http://imgfz.com/i/CfudAiq.png",
   },
 
   {
